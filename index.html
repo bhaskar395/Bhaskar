@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dice Game</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="css/media.css" />
+    <link rel="stylesheet" href="css/general.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rampart+One&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Merriweather&family=Montserrat&family=Sacramento&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      defer
+      src="https://kit.fontawesome.com/e3b44fe7a9.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body>
+    <div class="container-wraper">
+      <div class="container">
+        <!-- --------------------------left div---------------------------------- -->
+        <div class="container-sides col-w border-w">
+          <h1>INSTRUCTIONS:-----</h1>
+          <p>1.Only two players can play at a time.🧑‍🤝‍🧑</p>
+          <p>2.First start with player one then go to second.</p>
+          <p>3.Then click the button "Roll-dice" to rool the dice</p>
+          <p>
+            4.When dice is rooled then that dice number is stored and added into
+            current.
+          </p>
+          <p>5.There is only 6 attemps are given to each of the players.</p>
+          <p>
+            6.If dice number appear as one then all current will become NULL or
+            ZERO.
+          </p>
+          <p>
+            7.You can hold that current into score of that particular player.
+          </p>
+          <p>
+            8.If current is not stored then after 6th attempt current is
+            automatically added to score.
+          </p>
+          <p>
+            9.Who will win!!🤔Whhich player reach score equal to 100 he/she will
+            own🎊🎉🎉🎉
+          </p>
+        </div>
+
+        <!-- -------------------------------------middle div-----------------------------------  -->
+        <div class="container-center">
+          <div class="container-center-left">
+            <h2>Player 1</h2>
+            <p class="score" id="score1">0</p>
+            <div class="current">
+              <h3>Current</h3>
+              <p class="currentP" id="current1">0</p>
+            </div>
+          </div>
+          <div class="container-center-middle">
+            <button onclick="newG.play();" class="btn btn-new">New Game</button>
+            <img src="img/dice-1.png" alt="" class="dice" />
+            <p class="chance-left">6-left</p>
+            <button onclick="dice.play();" class="btn btn-rool">
+              Roll Dice
+            </button>
+            <button class="btn btn-hold">Hold</button>
+          </div>
+          <div class="container-center-right">
+            <h2>Player 2</h2>
+            <p class="score" id="score2">0</p>
+            <div class="current">
+              <h3>Current</h3>
+              <p class="currentP" id="current2">0</p>
+            </div>
+          </div>
+          <!-- -----------------------toggle bar start---------- -->
+          <div class="toggle">
+            <ul>
+              <li>
+                <i class="toggle-logo fa-solid fa-bars col-w"></i>
+                <div class="sub-manu-1">
+                  <ul>
+                    <li>
+                      <a onclick="audio1.play();" class="toggle-inst" href=""
+                        >Instructions</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        onclick="audio1.play();"
+                        href="https://www.arkadium.com/free-online-games/"
+                        >More Games...</a
+                      >
+                    </li>
+                    <li>
+                      <a href="#">Backgrounds</a>
+                      <div class="sub-manu-2">
+                        <ul>
+                          <li class="B-1">
+                            <a onclick="audio1.play();">Background-1</a>
+                          </li>
+                          <li class="B-2">
+                            <a onclick="audio1.play();">Background-2</a>
+                          </li>
+                          <li class="B-3">
+                            <a onclick="audio1.play();">Background-3</a>
+                          </li>
+                        </ul>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <!-- ------------------------toggle bar end-------------- -->
+        </div>
+
+        <!-- -----------------------------right div------------------------------------ -->
+
+        <div class="container-sides col-w border-w">
+          <h1>More Games You May Like---</h1>
+          <div class="more-G">
+            <div class="more-G-raw-1">
+              <!------>
+              <div class="game-item">
+                <a href="https://www.arkadium.com/games/crystal-collapse/"
+                  ><img src="img/game1.jpg" alt="" />Crystal</a
+                >
+              </div>
+              <!------>
+              <div class="game-item">
+                <a href="https://www.arkadium.com/games/sweet-shuffle/"
+                  ><img src="img/game2.jpg" alt="" />Sweet</a
+                >
+              </div>
+              <!------>
+              <div class="game-item">
+                <a href="https://www.arkadium.com/games/word-wipe/"
+                  ><img src="img/game3.jpg" alt="" />word</a
+                >
+              </div>
+            </div>
+            <!-- ------------------- -->
+            <div class="more-G-raw-1">
+              <!------>
+              <div class="game-item">
+                <a href="https://www.arkadium.com/games/mahjongg-solitaire/"
+                  ><img src="img/game4.jpg" alt="" />MJ</a
+                >
+              </div>
+              <!------>
+              <div class="game-item">
+                <a href="https://www.arkadium.com/games/bubble-shooter/"
+                  ><img src="img/game5.jpg" alt="" />Bubble</a
+                >
+              </div>
+              <!------>
+              <div class="game-item">
+                <a href="https://www.arkadium.com/games/spider-solitaire/"
+                  ><img src="img/game6.jpg" alt="" />spider</a
+                >
+              </div>
+            </div>
+            <!-- ------------------- -->
+            <div class="more-G-raw-1">
+              <!------>
+              <div class="game-item">
+                <a href="https://www.arkadium.com/games/sudoku/"
+                  ><img src="img/game7.jpg" alt="" />sudoku</a
+                >
+              </div>
+              <!------>
+              <div class="game-item">
+                <a href="https://www.arkadium.com/games/spellbound/"
+                  ><img src="img/game8.jpg" alt="" /> spell</a
+                >
+              </div>
+              <!------>
+              <div class="game-item">
+                <a href="https://www.arkadium.com/games/hearts/"
+                  ><img src="img/game9.jpg" alt="" />Heart</a
+                >
+              </div>
+            </div>
+          </div>
+          <a
+            href="https://www.arkadium.com/free-online-games/"
+            class="btn col-w"
+            >Click here for more games...</a
+          >
+        </div>
+      </div>
+    </div>
+    <!-- --------------------------------------------instruction board--------------------------- -->
+
+    <div class="inst-wraper">
+      <div class="inst-container">
+        <h1>First read these INSTRUCTIONS below:-----</h1>
+        <p>1.Only two players can play at a time.🧑‍🤝‍🧑</p>
+        <p>2.First start with player one then go to second.</p>
+        <p>3.Then click the button "Roll-dice" to rool the dice</p>
+        <p>
+          4.When dice is rooled then that dice number is stored and added into
+          current.
+        </p>
+        <p>5.There is only 6 attemps are given to each of the players.</p>
+        <p>
+          6.If dice number appear as one then all current will become NULL or
+          ZERO.
+        </p>
+        <p>7.You can hold that current into score of that particular player.</p>
+        <p>
+          8.If current is not stored then after 6th attempt current is
+          automatically added to score.
+        </p>
+        <p>
+          9.Who will win!!🤔Whhich player reach score equal to 100 he/she will
+          own🎊🎉🎉🎉
+        </p>
+        <h1>Best Experience on landscape mode.</h1>
+        <button onclick="audio1.play();" class="inst-close btn">Close</button>
+      </div>
+    </div>
+    <!-- ---------------------------------------------------who will own---------------------- -->
+    <div class="win m-auto">
+      <h1 id="win">Player XXX Won.........🎊🎊🎉🎉</h1>
+    </div>
+  </body>
+  <script src="js/script.js"></script>
+</html>
